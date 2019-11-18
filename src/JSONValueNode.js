@@ -110,7 +110,7 @@ export default class JSONValueNode extends React.Component {
           />
         ) : (
           <span
-            onClick={isEditable && this.toggleEdit}
+            onClick={isEditable ? this.toggleEdit : () => {}}
             {...styling('valueText', nodeType, keyPath)}
           >
             {valueRenderer(valueGetter(this.props.value), value, ...keyPath)}
