@@ -90,7 +90,7 @@ export default class JSONValueNode extends React.Component {
 
     const { value, editing } = this.state;
     const parentKeyPath = keyPath.length ? keyPath[keyPath.length - 1] : '';
-    const isEditable = editableProperties.includes(parentKeyPath);
+    const isEditable = editableProperties.length ? editableProperties.includes(parentKeyPath) : true;
 
     return (
       <li
